@@ -1,8 +1,8 @@
 {
-  "tomcat": "you tomcat path, catalina_home",
-  "project": "project name in webapps",
-  "view_src": "source views dir path",
-  "view_target": "target view dir path relative to project property",
-  "lib_src": "source lib absolute path rule, like /lib/**/*.jar",
-  "lib_target": "target lib dir path relative to project property"
+  "tomcat": "/home/liang/apache-tomcat-9.0.36",
+  "project": "smartbank",
+  "view_src": "/home/liang/projects/java/BOE/SmartBank/smartbank-web/src/main/webapp/WEB-INF/views",
+  "view_target": "/WEB-INF/views",
+  "lib_src": "/home/liang/projects/java/SmartBank/smartbank-application/*/target/*.jar",
+  "lib_target": "/WEB-INF/lib"
 }
