@@ -1,0 +1,8 @@
+{
+  "tomcat": "you tomcat path, catalina_home",
+  "project": "project name in webapps",
+  "view_src": "source views dir path",
+  "view_target": "target view dir path relative to project property",
+  "lib_src": "source lib absolute path rule, like /lib/**/*.jar",
+  "lib_target": "target lib dir path relative to project property"
+}
