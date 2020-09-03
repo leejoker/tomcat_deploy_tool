@@ -20,6 +20,7 @@ exist = File.exist?('metadata')
 fo.create_metadata unless exist
 
 jar_files = fo.get_files_by_rule(json['lib_src'])
+puts "jar_files: #{jar_files}"
 
 loop do
   update_array = []
@@ -29,6 +30,7 @@ loop do
     time = fo.get_metadata_value(file_name)
     stat = File::Stat.new(file)
     mtime = stat.mtime.to_i
+    puts file_name.to_s, time.to_s, mtime.to_s
     unless time.nil?
       update_array.push(file) if mtime > time.to_i
     end
