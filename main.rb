@@ -40,5 +40,5 @@ loop do
   puts '**************************************部署views********************************************'
   fo.copy_dir(json['view_src'], view_path) unless update_array.empty?
 
-  sleep 30
+  sleep 10
 end
