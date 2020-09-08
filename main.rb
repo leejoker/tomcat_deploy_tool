@@ -19,10 +19,9 @@ fo = FileOperator.new
 exist = File.exist?('metadata')
 fo.create_metadata unless exist
 
-jar_files = fo.get_files_by_rule(json['lib_src'])
-puts "jar_files: #{jar_files}"
-
 loop do
+  jar_files = fo.get_files_by_rule(json['lib_src'])
+  puts "jar_files: #{jar_files}"
   update_array = []
   hash_array = {}
   jar_files.each do |file|
@@ -42,5 +41,6 @@ loop do
   puts '**************************************部署views********************************************'
   fo.copy_dir(json['view_src'], view_path) unless update_array.empty?
 
+  jar_files.clear
   sleep 10
 end

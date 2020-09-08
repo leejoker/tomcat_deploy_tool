@@ -1,4 +1,4 @@
-# frozen_string_literal: string
+# frozen_string_literal: true
 
 require 'fileutils'
 
@@ -31,13 +31,12 @@ class FileOperator
   def get_metadata_value(key)
     lines = IO.readlines('metadata')
     lines.shift
+    meta_map = {}
     lines.each do |line|
-      if line.include?(key)
-        value_array = line.split('=')
-        return value_array[1]
-      end
+      value_array = line.split('=')
+      meta_map[value_array[0]] = value_array[1]
     end
-    nil
+    meta_map[key]
   end
 
   def write_metadata_value(hash_value)
