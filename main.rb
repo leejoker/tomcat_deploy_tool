@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require './utils/file_operations.rb'
+require_relative 'utils/file_operations.rb'
 
 config = IO.read('config.json')
 json = JSON.parse(config)
